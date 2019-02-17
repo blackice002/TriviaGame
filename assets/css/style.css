@@ -1,0 +1,68 @@
+/* background setting for body */
+
+body { 
+	background: url(../images/brain2.jpg) no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Archivo Black', sans-serif;
+	color: white;
+	padding: 25px;
+	text-shadow: 2px 2px red;
+}
+
+.answer,
+#timer {
+	font-weight: 900;
+}
+
+#start {
+	border: 2px solid white;
+	color: rgb(181, 108, 0);
+}
+
+.question{
+	height: 40px;
+	text-align: center;
+	border: groove 2px black;
+	margin: 0 5%;
+	background-color:darkcyan;
+	color: white;
+}
+.choices {
+	text-align: center;
+	border: groove 2px black;
+	border-radius: 0 20px 0 20px;
+	margin: 0 5%;
+}
+/* color change to gray when mouseenter */
+.choices:hover {
+	background-color:gray;
+	color: white;
+}
+
+#gameScreen {
+	background:rgba(255,255,255, 0.7 );
+	-webkit-box-shadow: 7px 5px 47px 0px rgba(255,0,0,0.76);
+	-moz-box-shadow: 7px 5px 47px 0px rgba(255,0,0,0.76);
+	box-shadow: 7px 5px 47px 0px rgba(255,0,0,0.76);
+}
+
+.shadow {
+	-webkit-box-shadow: -7px 6px 5px -1px rgba(255,0,0,0.79);
+	-moz-box-shadow: -7px 6px 5px -1px rgba(255,0,0,0.79);
+	box-shadow: -7px 6px 5px -1px rgba(255,0,0,0.79);
+}
+/* declearing the size of answer image */
+img{
+	width:320px;
+	height:240px;
+}
+/* jumboturn transparant */
+.jumboturn{
+	background:rgba(0, 0, 0, 0.5);
+}
