@@ -12,17 +12,11 @@ $(document).ready(function() {
 		
 	// creating question and answer div with object and value
 	function questionContent() {
-    	$("#gameScreen").append("<p class='question'>" + 
-    		questions[questionCounter].question + 
-    		"</p> <p class='choices'>" + 
-    		questions[questionCounter].choices[0] + 
-    		"</p><p class='choices'>" + 
-    		questions[questionCounter].choices[1] + 
-    		"</p><p class='choices'>" + 
-    		questions[questionCounter].choices[2] + 
-    		"</p><p class='choices'>" + 
-    		questions[questionCounter].choices[3] + 
-				"</p>");
+		$("#gameScreen").append("<p class='question'>" + questions[questionCounter].question + "</p>", 
+		"<p class='choices'>" + questions[questionCounter].choices[0] + "</p>", 
+		"<p class='choices'>" + questions[questionCounter].choices[1] + "</p>", 
+		"<p class='choices'>" + questions[questionCounter].choices[2] + "</p>", 
+		"<p class='choices'>" + questions[questionCounter].choices[3] + "</p>");
 	}
 
 	// function for right answer
