@@ -45,7 +45,7 @@ $(document).ready(function() {
 		questionCounter++;
 	}
 
-	// function for runout time
+	// function for time runout 
 	function userTimeout() {
 		if (time === 0) {
 			$("#gameScreen").html("<p>You ran out of time!</p>");
@@ -60,30 +60,27 @@ $(document).ready(function() {
 		}
 	}
 
-	// game finish screen with
+	// game finish screen with massage of correctGuess  and incorrect guesses
 	function resultsScreen() {
 		if (correctGuesses === questions.length) {
 			var endMessage = "congratulation ! you won";
 		}
-		// else if (correctGuesses > incorrectGuesses) {
-		// 	var endMessage = "Good work! But do better you can...";
-		// 	var bottomText = "all your base are belong to us";
-		// }
 		else {
 			var endMessage = "practice makes perfect";
 		}
+
 		$("#gameScreen").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" + 
 			correctGuesses + "</strong> right.</p>" + 
 			"<p>You got <strong>" + incorrectGuesses + "</strong> wrong.</p>");
 		$("#gameScreen").append("<h1 id='start'>Start Over?</h1>");
-		// $("#bottomText").html(bottomText);
+
 		gameReset();
 		$("#start").click(nextQuestion);
 	}
 
-	// game clock currently set to 15 seconds
+	// timer for the question 15 seconds
 	function timer() {
-		clock = setInterval(countDown, 1000);s
+		clock = setInterval(countDown, 1000);
 		function countDown() {
 			if (time < 1) {
 				clearInterval(clock);
@@ -113,7 +110,7 @@ $(document).ready(function() {
 
 	// reset score and counter parameters on restart
 	function gameReset() {
-		questionCounter = 0;
+		questionCounter=0;
 		correctGuesses = 0;
 		incorrectGuesses = 0;
 	}
@@ -128,8 +125,6 @@ $(document).ready(function() {
 
     // this starts the game
     $("#start").click(nextQuestion);
-
-    // answer select screen
 	$("#gameScreen").on("click", ".choices", (function() {
 		var userGuess = $(this).text();
 		if (userGuess === questions[questionCounter].correctAnswer) {
